@@ -11,7 +11,7 @@
         <div class="row">
             <div *ngFor="let element of posti index as i" class="col-md-4">
             <div class="card mb-4">
-                <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font;">{{element.starter}}</h1>
+                <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{element.nome}}</h1>
                 <br>
                 <br>
                 <img class="card-img-top" src="{{element.immagine}}" alt="Card image">
@@ -21,7 +21,7 @@
                     <br>
                     <br> 
                     <br>
-                    <button (click) = "setBtn(element.nome)" type="button" class="btn azzurro" style="margin-left: 167px; margin-right: 70px; font-family: POKEMON; font-size: larger;" [ngClass]="{'azzurro':pokemon[i].nome=='#120 STARYU', 'grigio':pokemon[i].nome=='#304 ARON', 'oro':pokemon[i].nome=='#539 SAWK' }">{{element.nome}}</button>
+                    <button (click) = "setBtn(element.nome)" type="button" class="btn blu" style="margin-left: 225px; margin-right: 70px; font-family: Arial, Helvetica, sans-serif; font-size: x-large;" [ngClass]="{'azzurro':posti[i].nome=='MILANO', 'grigio':posti[i].nome=='ROMA', 'oro':posti[i].nome=='NAPOLI', 'verde':posti[i].nome=='VENEZIA', 'blu':posti[i].nome=='BOLOGNA' }">{{element.nome}}</button>
                 </div>
             </div>
         </div>
@@ -29,40 +29,23 @@
     </div>
 
 </ng-template>
-<ng-template *ngIf = "name === '#120 STARYU'; then bloccoUno"></ng-template>
+<ng-template *ngIf = "name === 'MILANO'; then bloccoUno"></ng-template>
 
 <ng-template #bloccoUno>
 
     <div class="container" style="width: 400px;">
         <div class="card mb-5">
-            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: POKEMON;">{{pokemon[0].starter}}</h1>
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[0].nome}}</h1>
             <br>
             <br>
-            <img class="card-img-top" src="{{pokemon[0].immagine}}" alt="Card image">
-            <div class="card-body" style="font-family: POKEMON; color: blue;" >
+            <img class="card-img-top" src="{{posti[0].immagine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
                 <br>
                 <br>
-                <p>- NOME: {{pokemon[0].nome}}</p>
-                <p>- DESCRIZIONE: {{pokemon[0].descrizione}}</p>
-                <p>- TIPO: {{pokemon[0].tipo}} </p>
-                <p>- PESO: {{pokemon[0].peso}} </p>
-                <p>- ALTEZZA: {{pokemon[0].altezza}} </p>
-                <p>- ABILITA': {{pokemon[0].abilita}}</p>
-                <p>- DOVE TROVARLO ?: {{pokemon[0].posizione}} </p>
-                <p>- TASSO DI CATTURA: {{pokemon[0].tassocattura}} </p>
-                <p>- DEBOLEZZE: {{pokemon[0].debolezze}}</p>
-                <p>- RESISTENZE: {{pokemon[0].resistenze}}</p>
-                <p>- ATTACCO: {{pokemon[0].attacco}}</p>
-                <p>- DIFESA: {{pokemon[0].difesa}}</p>
-                <p>- VELOCITA': {{pokemon[0].velocita}}</p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                <p>- NOME: {{posti[0].nome}}</p>
+                <p>- DESCRIZIONE: {{posti[0].nazione}}</p>
+                <p>- CAPITALE: {{posti[0].capitale}}</p>
+                <p>- ABITANTI: {{posti[0].abitanti}}</p>
                 <br>
                 <br>
                 <br>
@@ -77,135 +60,23 @@
 <br>
 
 </ng-template>
-<ng-template *ngIf = "name === '#304 ARON'; then bloccoDue"></ng-template>
+<ng-template *ngIf = "name === 'ROMA'; then bloccoDue"></ng-template>
 
 <ng-template #bloccoDue>
 
     <div class="container" style="width: 400px;">
         <div class="card mb-5">
-            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: POKEMON;">{{pokemon[1].starter}}</h1>
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[1].nome}}</h1>
             <br>
             <br>
-            <img class="card-img-top" src="{{pokemon[1].immagine}}" alt="Card image">
-            <div class="card-body" style="font-family: POKEMON; color: blue;" >
+            <img class="card-img-top" src="{{posti[1].immagine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
                 <br>
                 <br>
-                <p>- NOME: {{pokemon[1].nome}}</p>
-                <p>- DESCRIZIONE: {{pokemon[1].descrizione}}</p>
-                <p>- TIPO: {{pokemon[1].tipo}} </p>
-                <p>- PESO: {{pokemon[1].peso}} </p>
-                <p>- ALTEZZA: {{pokemon[1].altezza}} </p>
-                <p>- ABILITA': {{pokemon[1].abilita}}</p>
-                <p>- DOVE TROVARLO ?: {{pokemon[1].posizione}} </p>
-                <p>- TASSO DI CATTURA: {{pokemon[1].tassocattura}} </p>
-                <p>- DEBOLEZZE: {{pokemon[1].debolezze}}</p>
-                <p>- RESISTENZE: {{pokemon[1].resistenze}}</p>
-                <p>- ATTACCO: {{pokemon[1].attacco}}</p>
-                <p>- DIFESA: {{pokemon[1].difesa}}</p>
-                <p>- VELOCITA': {{pokemon[1].velocita}}</p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <a  href="reload()"class="btn home" style="color: white; width: 200px; margin-left: 19%;">HOME</a> 
-            </div>
-    </div>
-    </div>
-    <br>
-
-</ng-template>
-<ng-template *ngIf = "name === '#539 SAWK'; then bloccoTre"></ng-template>
-
-<ng-template #bloccoTre>
-    <div class="container" style="width: 400px;">
-        <div class="card mb-5">
-            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: POKEMON;">{{pokemon[2].starter}}</h1>
-            <br>
-            <br>
-            <img class="card-img-top" src="{{pokemon[2].immagine}}" alt="Card image">
-            <div class="card-body" style="font-family: POKEMON; color: blue;" >
-                <br>
-                <br>
-                <p>- NOME: {{pokemon[2].nome}}</p>
-                <p>- DESCRIZIONE: {{pokemon[2].descrizione}}</p>
-                <p>- TIPO: {{pokemon[2].tipo}} </p>
-                <p>- PESO: {{pokemon[2].peso}} </p>
-                <p>- ALTEZZA: {{pokemon[2].altezza}} </p>
-                <p>- ABILITA': {{pokemon[2].abilita}}</p>
-                <p>- DOVE TROVARLO ?: {{pokemon[2].posizione}} </p>
-                <p>- TASSO DI CATTURA: {{pokemon[2].tassocattura}} </p>
-                <p>- DEBOLEZZE: {{pokemon[2].debolezze}}</p>
-                <p>- RESISTENZE: {{pokemon[2].resistenze}}</p>
-                <p>- ATTACCO: {{pokemon[2].attacco}}</p>
-                <p>- DIFESA: {{pokemon[2].difesa}}</p>
-                <p>- VELOCITA': {{pokemon[2].velocita}}</p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <a  href="reload()"class="btn home" style="color: white; width: 200px; margin-left: 19%;">HOME</a> 
-            </div>
-    </div>
-    </div>
-    <br>
-
-</ng-template>
-<ng-template *ngIf = "name === '#120 STARYU'; then bloccoUno"></ng-template>
-
-<ng-template #bloccoUno>
-
-    <div class="container" style="width: 400px;">
-        <div class="card mb-5">
-            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: POKEMON;">{{pokemon[0].starter}}</h1>
-            <br>
-            <br>
-            <img class="card-img-top" src="{{pokemon[0].immagine}}" alt="Card image">
-            <div class="card-body" style="font-family: POKEMON; color: blue;" >
-                <br>
-                <br>
-                <p>- NOME: {{pokemon[0].nome}}</p>
-                <p>- DESCRIZIONE: {{pokemon[0].descrizione}}</p>
-                <p>- TIPO: {{pokemon[0].tipo}} </p>
-                <p>- PESO: {{pokemon[0].peso}} </p>
-                <p>- ALTEZZA: {{pokemon[0].altezza}} </p>
-                <p>- ABILITA': {{pokemon[0].abilita}}</p>
-                <p>- DOVE TROVARLO ?: {{pokemon[0].posizione}} </p>
-                <p>- TASSO DI CATTURA: {{pokemon[0].tassocattura}} </p>
-                <p>- DEBOLEZZE: {{pokemon[0].debolezze}}</p>
-                <p>- RESISTENZE: {{pokemon[0].resistenze}}</p>
-                <p>- ATTACCO: {{pokemon[0].attacco}}</p>
-                <p>- DIFESA: {{pokemon[0].difesa}}</p>
-                <p>- VELOCITA': {{pokemon[0].velocita}}</p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                <p>- NOME: {{posti[1].nome}}</p>
+                <p>- DESCRIZIONE: {{posti[1].nazione}}</p>
+                <p>- CAPITALE: {{posti[1].capitale}}</p>
+                <p>- ABITANTI: {{posti[1].abitanti}}</p>
                 <br>
                 <br>
                 <br>
@@ -220,32 +91,23 @@
 <br>
 
 </ng-template>
-<ng-template *ngIf = "name === '#120 STARYU'; then bloccoUno"></ng-template>
+<ng-template *ngIf = "name === 'NAPOLI'; then bloccoTre"></ng-template>
 
-<ng-template #bloccoUno>
+<ng-template #bloccoTre>
 
     <div class="container" style="width: 400px;">
         <div class="card mb-5">
-            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: POKEMON;">{{pokemon[0].starter}}</h1>
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[2].nome}}</h1>
             <br>
             <br>
-            <img class="card-img-top" src="{{pokemon[0].immagine}}" alt="Card image">
-            <div class="card-body" style="font-family: POKEMON; color: blue;" >
+            <img class="card-img-top" src="{{posti[2].immagine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
                 <br>
                 <br>
-                <p>- NOME: {{pokemon[0].nome}}</p>
-                <p>- DESCRIZIONE: {{pokemon[0].descrizione}}</p>
-                <p>- TIPO: {{pokemon[0].tipo}} </p>
-                <p>- PESO: {{pokemon[0].peso}} </p>
-                <p>- ALTEZZA: {{pokemon[0].altezza}} </p>
-                <p>- ABILITA': {{pokemon[0].abilita}}</p>
-                <p>- DOVE TROVARLO ?: {{pokemon[0].posizione}} </p>
-                <p>- TASSO DI CATTURA: {{pokemon[0].tassocattura}} </p>
-                <p>- DEBOLEZZE: {{pokemon[0].debolezze}}</p>
-                <p>- RESISTENZE: {{pokemon[0].resistenze}}</p>
-                <p>- ATTACCO: {{pokemon[0].attacco}}</p>
-                <p>- DIFESA: {{pokemon[0].difesa}}</p>
-                <p>- VELOCITA': {{pokemon[0].velocita}}</p>
+                <p>- NOME: {{posti[2].nome}}</p>
+                <p>- DESCRIZIONE: {{posti[2].nazione}}</p>
+                <p>- CAPITALE: {{posti[2].capitale}}</p>
+                <p>- ABITANTI: {{posti[2].abitanti}}</p>
                 <br>
                 <br>
                 <br>
@@ -253,7 +115,61 @@
                 <br>
                 <br>
                 <br>
+                <a  href="reload()"class="btn home" style="color: white; width: 200px; margin-left: 19%;">HOME</a> 
+            </div>
+    </div>
+</div>
+<br>
+
+</ng-template>
+<ng-template *ngIf = "name === 'VENEZIA'; then bloccoQuattro"></ng-template>
+
+<ng-template #bloccoQuattro>
+
+    <div class="container" style="width: 400px;">
+        <div class="card mb-5">
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[3].nome}}</h1>
+            <br>
+            <br>
+            <img class="card-img-top" src="{{posti[3].immagine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
                 <br>
+                <br>
+                <p>- NOME: {{posti[3].nome}}</p>
+                <p>- DESCRIZIONE: {{posti[3].nazione}}</p>
+                <p>- CAPITALE: {{posti[3].capitale}}</p>
+                <p>- ABITANTI: {{posti[3].abitanti}}</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a  href="reload()"class="btn home" style="color: white; width: 200px; margin-left: 19%;">HOME</a> 
+            </div>
+    </div>
+</div>
+<br>
+
+</ng-template>
+<ng-template *ngIf = "name === 'BOLOGNA'; then bloccoCinque"></ng-template>
+
+<ng-template #bloccoCinque>
+
+    <div class="container" style="width: 400px;">
+        <div class="card mb-5">
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[4].nome}}</h1>
+            <br>
+            <br>
+            <img class="card-img-top" src="{{posti[4].immagine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
+                <br>
+                <br>
+                <p>- NOME: {{posti[4].nome}}</p>
+                <p>- DESCRIZIONE: {{posti[4].nazione}}</p>
+                <p>- CAPITALE: {{posti[4].capitale}}</p>
+                <p>- ABITANTI: {{posti[4].abitanti}}</p>
                 <br>
                 <br>
                 <br>

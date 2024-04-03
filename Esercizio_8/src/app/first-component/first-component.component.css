@@ -1,0 +1,44 @@
+.azzurro{
+    position: absolute;
+    top: 90%;
+    background-color: lightblue;
+    border: solid;
+    border-radius: 10px;
+}
+.grigio{
+    position: absolute;
+    top: 90%;
+    background-color: gray;
+    border: solid;
+    border-radius: 10px;
+}
+.oro{
+    position: absolute;
+    top: 90%;
+    background-color: goldenrod;
+    border: solid;
+    border-radius: 10px;
+}
+.verde{
+    position: absolute;
+    top: 90%;
+    background-color: lightgreen;
+    border: solid;
+    border-radius: 10px;
+}
+.blu{
+    position: absolute;
+    top: 90%;
+    background-color: lightblue;
+    border: solid;
+    border-radius: 10px;
+}
+
+
+.home{
+    position: absolute;
+    top: 80%;
+    background-color: red;
+    border: solid;
+    border-radius: 10px;
+}
